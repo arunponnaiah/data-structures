@@ -3,6 +3,7 @@ package com.ds.list;
  * Custom linked list implementation.
  * @author aponnaia
  */
+
 public class LinkedList {
 	private Node head;
 	
@@ -52,19 +53,48 @@ public class LinkedList {
 		}
 	}
 	
+	/**
+	 * find nth element
+	 */
+	public Node get(int index){
+		int count =0;
+		return get(head,count,index);
+	}
+	
 	
 	/**
-	 * Main method to add nodes to linked list and print them all.
-	 * @param args
+	 * Iterator to iterate over LinkedList
+	 * @param node
+	 * @param count
+	 * @param index
+	 * @return
 	 */
-	public static void main(String[] args) {
-		LinkedList list = new LinkedList();
-		list.push(1);
-		list.push(2);
-		list.push(3);
-		list.push(4);
-		list.push(5);
+	private Node get(Node node,int count,int index) {
+		if(node==null || count== index)
+			return node;
+		count++;
+		return get(node.getNext(),count,index);
+	}
+	
+	/**
+	 * Returns length of list
+	 * @return
+	 */
+	public int getLength(){
+		int length=0;
+		return this.iterate(head,length);
 		
-		list.printAll();
+	}
+
+	
+	/**
+	 * Iterator function to assist getLength() function
+	 * @return
+	 */
+	private int iterate(Node node, int length) {
+		if(node ==null)
+			return length;
+		length++;
+		return iterate(node.getNext(), length);
 	}
 }
