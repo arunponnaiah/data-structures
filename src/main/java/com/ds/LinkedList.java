@@ -1,4 +1,4 @@
-package com.ds.list;
+package com.ds;
 /**
  * Custom linked list implementation.
  * @author aponnaia

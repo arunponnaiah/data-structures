@@ -1,7 +1,9 @@
-package com.ds.list;
+package com.ds;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.ds.LinkedList;
 
 import junit.framework.Assert;
 

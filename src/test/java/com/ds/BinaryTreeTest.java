@@ -1,4 +1,4 @@
-package com.ds.tree;
+package com.ds;
 
 import org.junit.Before;
 import org.junit.Test;

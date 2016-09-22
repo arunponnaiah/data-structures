@@ -1,4 +1,4 @@
-package com.ds.tree;
+package com.ds;
 
 /**
  * Custom binary tree.
