@@ -1,5 +1,10 @@
 package com.ds;
 
+/**
+ * Stack data structure.
+ * @author aponnaia
+ *
+ */
 public class Stack{
 	
 	Node last;
